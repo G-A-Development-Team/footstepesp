@@ -15,7 +15,7 @@ local ctColor = gui.ColorPicker(left, "fstep.ctclr", "CT Color", 80, 170, 250, 2
 
 local audibleRun = gui.Checkbox(right, "fstep.onlyaudiblerun", "Only audible running", true)
 local includeJump = gui.Checkbox(right, "fstep.includejump", "Include jump/land sounds", true)
-local runSpeed = gui.Slider(right, "fstep.runspeed", "Run Speed", 220, 150, 320)
+local runSpeed = gui.Slider(right, "fstep.runspeed", "Run Speed", 190, 150, 320)
 local hearingDist = gui.Slider(right, "fstep.hearing", "Hearing Distance", 1500, 100, 2000)
 -- Show window when menu is open
 local menu_ref = gui.Reference("menu")
@@ -470,4 +470,5 @@ end)
 callbacks.Register("Draw", on_draw)
 
 print("♥ " .. GetScriptName() .. " loaded: FootStepESP active")
+
 
