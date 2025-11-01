@@ -318,7 +318,12 @@ local function on_draw()
     if not enabled:GetValue() then return end
 
     local lp = entities.GetLocalPlayer()
-    if not lp then return end
+    if not lp then
+        -- Clear all runtime state when not in a game to avoid leftover footprints on main menu
+        footprints = {}
+        playersState = {}
+        return
+    end
 
     local maxA = alpha:GetValue()
     local now = globals.CurTime()
